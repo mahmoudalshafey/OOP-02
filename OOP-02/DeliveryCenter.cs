@@ -36,7 +36,7 @@ namespace OOP_02
             {
                 for (int i = 0; i < shipment.Length; i++)
                 {
-                    if (shipment[i].TrackingCode02 == trackingCode)
+                    if (shipment[i].TrackingCode == trackingCode)
                     {
                         return shipment[i];
                     }
@@ -50,7 +50,7 @@ namespace OOP_02
         {
             for (int i = 0; i < this.shipment.Length; i++)
             {
-                if (this.shipment[i].TrackingCode02 == null)
+                if (this.shipment[i].TrackingCode == null)
                 {
                     this.shipment[i] = shipment;
                     return true;

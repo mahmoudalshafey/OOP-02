@@ -8,14 +8,14 @@ namespace OOP_02
     {
         private string trackingCode;
         private string description;
-        private double weight;
-        private double deliveryFee;
+        private decimal weight;
+        private decimal deliveryFee;
 
         private string destination;
 
-        public double Destination01 { get; set; }
+        public double Destination { get; set; }
 
-        public string TrackingCode01
+        public string TrackingCode
         {
             get;
             set
@@ -24,7 +24,7 @@ namespace OOP_02
                     trackingCode = value;
             }
         }
-        public string Description01
+        public string Description
         {
             get;
             set
@@ -33,7 +33,7 @@ namespace OOP_02
                     description = value;
             }
         }
-        public double Weight01
+        public decimal Weight
         {
             get;
             set
@@ -43,7 +43,7 @@ namespace OOP_02
             }
         }
 
-        public double DeliveryFee01
+        public decimal DeliveryFee
         {
             get;
             set
@@ -52,34 +52,11 @@ namespace OOP_02
                     deliveryFee = value;
             }
         }
-
-        public string TrackingCode02
-        {
-            get { return trackingCode; }
-
-        }
-
-        public string Description02
-        {
-            get { return description; }
-            set { description = value; }
-        }
-
-        public double Weight02
-        {
-            get { return weight; }
-            set { weight = value; }
-        }
-
-        public double DeliveryFee02 { get; private set; }
-
-        public string Destination02 { get; set; }
-
-        public double EstimatedCost
+        public decimal EstimatedCost
         {
             get
             {
-                return DeliveryFee01 + (Weight01 * 5);
+                return DeliveryFee + (Weight * 5);
             }
         }
 
@@ -93,7 +70,7 @@ namespace OOP_02
 
         }
 
-        public Shipment(string description, double weight, double deliveryFee, string trackingCode, string destination)
+        public Shipment(string trackingCode , string description, decimal weight, decimal deliveryFee, string destination)
         {
             this.description = description;
             this.weight = weight;
@@ -102,7 +79,7 @@ namespace OOP_02
             this.destination = destination;
         }
 
-        public void UpdateDeliveryFee(double newFee)
+        public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
                 deliveryFee = newFee;
