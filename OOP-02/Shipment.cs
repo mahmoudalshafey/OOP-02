@@ -52,7 +52,7 @@ namespace OOP_02
                     deliveryFee = value;
             }
         }
-        public decimal EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get
             {
