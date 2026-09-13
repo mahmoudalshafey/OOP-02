@@ -12,6 +12,13 @@
             // b - because struct is suitable for small data structures that have value semantics, while class is suitable for larger, more complex objects that require reference semantics.
 
             #endregion
+
+            #region Ques 2
+            // a - Shipment
+            // b - ExpressShipment
+            // c - trackingCode.
+            // d - to reduce the code & make maintanable . 
+            #endregion
         }
     }
 }
