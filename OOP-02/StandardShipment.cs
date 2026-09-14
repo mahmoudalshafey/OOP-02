@@ -6,6 +6,10 @@ namespace OOP_02
 {
     internal class StandardShipment : Shipment
     {
+        public StandardShipment()
+        {
+            
+        }
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, string destination)
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
